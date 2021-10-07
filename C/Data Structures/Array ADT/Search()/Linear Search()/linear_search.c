@@ -48,6 +48,6 @@ int main()
         printf("\nEnter the Key:");
         scanf("%d", &key);
 
-        linear_search(&arr, key);
+        printf("%d key is at %d index", key, linear_search(&arr, key));
     }
 }
