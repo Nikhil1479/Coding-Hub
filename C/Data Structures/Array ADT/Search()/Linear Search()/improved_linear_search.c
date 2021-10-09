@@ -17,13 +17,21 @@ void input(struct array *arr)
     }
 }
 
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
 int linear_search(struct array *arr, int key)
 {
     for (int i = 0; i < arr->length; i++)
     {
         if (key == arr->A[i])
         {
-            return i + 1; //just for user understanding
+            swap(&arr->A[i], &arr->A[0]);
+            return i; //just for user understanding
         }
     }
     return -1;
