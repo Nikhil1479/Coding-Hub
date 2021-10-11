@@ -13,26 +13,23 @@ void Display(struct Array arr)
         printf("%d ", arr.A[i]);
 }
 
-int binary_search(struct Array arr, int key)
+int binary_search(int a[], int low, int high, int key)
 {
-    int low = 0;
-    int high = arr.length;
     int mid;
-
-    while (low <= high)
+    if (low <= high)
     {
         mid = (low + high) / 2;
-        if (key == arr.A[mid])
+        if (key == a[mid])
         {
             return mid;
         }
-        else if (key > arr.A[mid])
+        else if (key > a[mid])
         {
-            low = mid + 1;
+            return binary_search(a, mid + 1, high, key);
         }
         else
         {
-            high = mid - 1;
+            return binary_search(a, low, mid - 1, key);
         }
     }
     return -1;
@@ -40,13 +37,13 @@ int binary_search(struct Array arr, int key)
 
 int main()
 {
-    int element_search;
+    int key;
     struct Array arr1 = {{2, 3, 4, 5, 6, 7, 8, 9}, 10, 8}; // Array should be in sorted order
 
     printf("Enter the element you want to search: ");
-    scanf("%d", &element_search);
+    scanf("%d", &key);
 
-    printf("Searched Element is at index: %d", binary_search(arr1, element_search));
+    printf("Searched Element is at index: %d", binary_search(arr1.A, 0, arr1.length, key));
 
     Display(arr1);
 
