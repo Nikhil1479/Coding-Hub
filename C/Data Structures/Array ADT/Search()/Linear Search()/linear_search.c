@@ -30,8 +30,9 @@ int linear_search(struct array *arr, int key)
     {
         if (key == arr->A[i])
         {
-            swap(&arr->A[i], &arr->A[i - 1]);
-            return i; //just for user understanding
+            swap(&arr->A[i], &arr->A[i - 1]); //Improving Linear Search [Transposition Method]
+                                              //!swap(&arr->A[i], &arr->A[0]); [Move to Front/Head Method]
+            return i;                         //just for user understanding
         }
     }
     return -1;
