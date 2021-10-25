@@ -9,6 +9,12 @@
 *.obj
 *.pdf
 
+
+# Images
+*.png
+*.ai
+*.jpg
+*.psd
 # Precompiled Headers
 *.gch
 *.pch
