@@ -46,15 +46,16 @@ public:
         {
             cout << "You have got 'E' grade" << endl;
         }
-        else if(avg >= 71 && avg < 81)
+        else if (avg >= 71 && avg < 81)
         {
             cout << "You have got 'A' grade" << endl;
         }
-        else if(avg >= 61 && avg < 71)
+        else if (avg >= 61 && avg < 71)
         {
             cout << "You have got 'B' grade" << endl;
         }
-        else if(avg >= 51 && avg < 61)
+        else if (avg >= 51 && avg < 61)
+            cout << "You are Failed" << endl;
     }
 };
 int main()

@@ -41,7 +41,7 @@ int binary_search(struct Array arr, int key)
 int main()
 {
     int element_search;
-    struct Array arr1 = {{2, 3, 4, 5, 6, 7, 8, 9}, 10, 8}; // Array should be in sorted order
+    struct Array arr1 = {{27, 30, 34, 45, 56, 59, 61}, 10, 7}; // Array should be in sorted order
 
     printf("Enter the element you want to search: ");
     scanf("%d", &element_search);
